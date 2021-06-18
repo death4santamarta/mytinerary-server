@@ -7,3 +7,15 @@ router.get('/test', (req,res) =>{
     
 })
 module.exports = router
+
+const cityModel = require('../model/cityModel')
+
+/*get all the cities*/
+router.get('/all',
+            (req,res) => {
+                cityModel.find({})
+                    .then(files => {
+                        res.send(files) 
+                    })
+                    .catch(err => console.log(err))
+            })

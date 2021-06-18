@@ -1,7 +1,14 @@
 const express = require("express")
 const app = express()
 const port = process.env.PORT || 5000
+const db = require('./keys').mongoURI
 
+
+const mongoose = require("mongoose")
+
+mongoose.connect(db, {useNewUrlParser: true, useCreateIndex: true})
+    .then(() => console.log('Connection to MongoDB established'))
+    .catch(err => console.log(err))
 
 const bodyParser = require("body-parser")//middleware
 const cors = require("cors")
