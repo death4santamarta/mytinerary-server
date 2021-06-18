@@ -4,6 +4,6 @@ const router = express.Router()
 
 router.get('/test', (req,res) =>{ 
     res.send ({ msg: 'Cities test route.'})
-
-    module.exports = router
+    
 })
+module.exports = router
