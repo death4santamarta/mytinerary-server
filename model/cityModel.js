@@ -1,16 +1,21 @@
 const mongoose = require('mongoose')
 
-const citySchema = new mongoose.Schema ({
-    name:{
-        type:String,
-        required:true
+
+const citySchema = new mongoose.Schema({
+    id: {
+        type: String,
+        required: true
     },
-    country:{
-        type:String,
-        required:true
+    name: {
+        type: String,
+        required: true
     },
-    img:{
-        type:String
+    country: {
+        type: String,
+        required: true
+    },
+    img: {
+        type: String
     }
 })
 
